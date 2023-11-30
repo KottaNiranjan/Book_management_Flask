@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="{{url_for('static',filename='books.js')}}"></script>
+    <style>
+        body{
+            min-height : 100%;
+  min-width : 100%;
+  background-size:100% 100%;
+  background-repeat:no-repeat;
+
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body style="background-image:url(https://png.pngtree.com/thumb_back/fh260/back_our/20190622/ourmid/pngtree-creative-synthesis-simple-book-education-and-training-background-image_219497.jpg)">
+    <div class="container-fluid">
+        <div>
+            <h1 style="text-align:center">Gradious Technology</h1>
+            <h2 style="text-align:center">Welcome {{user}} </h1>
+        </div>
+    
+        <h2 class="mt-4 mb-4 text-success">Book Management System <a href="logout" class="btn btn-info btn-lg" style="float:right">
+            <span class="glyphicon glyphicon-log-out"></span> Log out
+          </a></h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Books List</h2>
+                <ul id="books-list"></ul>
+            </div>
+            
+            <div class="col-md-6">
+                <h2>Add New Book</h2>
+                <form id="add-book-form">
+                    <div class="form-group">
+                        <label for="title">Id:</label>
+                        <input type="text" class="form-control" id="id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Title:</label>
+                        <input type="text" class="form-control" id="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author:</label>
+                        <input type="text" class="form-control" id="author" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="genre">Genre:</label>
+                        <input type="text" class="form-control" id="genre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="publicationYear">Publication Year:</label>
+                        <input type="number" class="form-control" id="publicationYear" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Book</button>
+                </form>
+            </div>
+        </div>
+        <div id="update-message" class="alert alert-success" style="display: none;margin-top:10px">
+                
+            <h5 id="status"></h5>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <h2>Update Book</h2>
+                <form id="update-book-form">
+                    <div class="form-group">
+                        <label for="updateBookId">Book ID:</label>
+                        <input type="number" class="form-control" id="updateBookId" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="updateTitle">Title:</label>
+                        <input type="text" class="form-control" id="updateTitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="updateAuthor">Author:</label>
+                        <input type="text" class="form-control" id="updateAuthor" >
+                    </div>
+                    <div class="form-group">
+                        <label for="updateGenre">Genre:</label>
+                        <input type="text" class="form-control" id="updateGenre"    >
+                    </div>
+                    <div class="form-group">
+                        <label for="updatePublicationYear">Publication Year:</label>
+                        <input type="number" class="form-control" id="updatePublicationYear" >
+                    </div>
+                    <button type="submit" class="btn btn-primary">Update Book</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2>Delete Book</h2>
+                <form id="delete-book-form">
+                    <div class="form-group">
+                        <label for="deleteBookId">Book ID:</label>
+                        <input type="number" class="form-control" id="deleteBookId" required>
+                    </div>
+                    <button type="submit" class="btn btn-danger">Delete Book</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+
+        
+    </script>
+</body>
+</html>

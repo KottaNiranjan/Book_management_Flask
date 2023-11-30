@@ -1,0 +1,6 @@
+flask
+pymongo
+jwt
+flask_jwt_extended
+datetime
+functools
